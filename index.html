@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZyZFruit – Frutta Secca di Qualità</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+</head>
+<body>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>Questo sito utilizza solo cookie tecnici necessari al funzionamento. Non raccogliamo né vendiamo dati personali. I font Google e le immagini esterne potrebbero impostare cookie di terze parti fuori dal nostro controllo.</p>
+  <button class="btn-cookie-accept" onclick="acceptCookie()">Ho capito</button>
+</div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="logo.png" class="logo-icon" alt="ZyZFruit logo"/>
+        <div class="logo-text">
+          <span class="logo-main">ZyZFruit</span>
+          <span class="logo-sub">FRUTTA SECCA DI QUALITÀ</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero">Home</a>
+        <a href="#storia">Storia</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#prodotti">Catalogo</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+
+      <a href="catalogo.html" class="btn btn-primary nav-cta">Scopri il catalogo</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>L'eccellenza della frutta secca,<br/>dalla nostra terra a te.</h1>
+      <p>Coltiviamo qualità. Produciamo bontà.<br/>Portiamo la frutta secca sulle tue tavole.</p>
+      <a href="#prodotti" class="btn btn-primary">Scopri i nostri prodotti</a>
+    </div>
+  </section>
+
+  <!-- STORIA -->
+  <section id="storia" class="storia">
+    <div class="container storia-grid">
+      <div class="storia-text fade-in">
+        <span class="leaf-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 5 6 5 13C5 16.866 8.134 20 12 20C15.866 20 19 16.866 19 13C19 6 12 2 12 2Z" fill="#6b8f3a"/><path d="M12 2C12 2 12 10 9 16" stroke="#3a5c2c" stroke-width="1" stroke-linecap="round"/></svg>
+        </span>
+        <h2>La nostra storia</h2>
+        <p>ZYZ FRUIT nasce in Sicilia come broker specializzato nella commercializzazione di frutta secca, fondata da professionisti con consolidata esperienza nel settore. L’azienda si distingue per la capacità di selezionare e fornire prodotti di alta qualità, garantendo ai propri clienti consegne rapide e puntuali dei nuovi raccolti richiesti. Grazie a una rete affidabile di fornitori e a una gestione efficiente della logistica, ZYZ FRUIT rappresenta un partner solido e competente per chi ricerca freschezza, continuità e professionalità nel mercato della frutta secca.</p>
+        <a href="#" class="btn btn-outline">Scopri di più</a>
+      </div>
+      <div class="storia-image fade-in">
+        <img src="logostoria.png" alt="Piantagione di pistacchi in Sicilia" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <!-- SERVIZI -->
+<section id="servizi" class="servizi">
+  <div class="container">
+
+    <!-- Canali B2B -->
+    <div class="section-header fade-in">
+      <p class="section-tag">MERCATI B2B</p>
+      <h2>Canali che Serviamo</h2>
+      <p class="section-sub">Fornitura dedicata per ogni tipologia di operatore professionale nel settore alimentare.</p>
+    </div>
+
+    <div class="canali-grid">
+      <div class="canale-card fade-in" style="--card-bg: #3a5c2c;">
+        <span class="card-num">01</span>
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Ho.Re.Ca.</h3>
+        <p>Hotel, ristoranti, bar. Ingredienti premium per esperienze memorabili.</p>
+      </div>
+      <div class="canale-card fade-in" style="--card-bg: #5c3a1e;">
+        <span class="card-num">02</span>
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        </div>
+        <h3>Food Service</h3>
+        <p>Catering, mense e ristorazione collettiva. Fornitura costante.</p>
+      </div>
+      <div class="canale-card fade-in" style="--card-bg: #6b8f3a;">
+        <span class="card-num">03</span>
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+        <h3>Ingrosso Dolciumi</h3>
+        <p>Pasticcerie, cioccolatieri e produttori dolciari. Materie prime selezionate.</p>
+      </div>
+      <div class="canale-card fade-in" style="--card-bg: #4a3520;">
+        <span class="card-num">04</span>
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Ortofrutta</h3>
+        <p>Grossisti e mercati ortofrutticoli. Distribuzione integrata.</p>
+      </div>
+    </div>
+
+    <!-- Perché sceglierci -->
+    <div class="section-header fade-in" style="margin-top: 80px;">
+      <p class="section-tag">PERCHÉ SCEGLIERCI</p>
+      <h2>Il Partner Giusto per il Tuo Business</h2>
+    </div>
+
+    <div class="perche-grid">
+      <div class="perche-card fade-in" style="--card-bg: #3a5c2c;">
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Qualità Certificata</h3>
+        <p>Selezione rigorosa dei fornitori e controllo costante su ogni lotto.</p>
+      </div>
+      <div class="perche-card fade-in" style="--card-bg: #5c3a1e;">
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <h3>Fornitura Costante</h3>
+        <p>Disponibilità garantita tutto l'anno tramite rete consolidata di fornitori.</p>
+      </div>
+      <div class="perche-card fade-in" style="--card-bg: #6b8f3a;">
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Esperienza B2B</h3>
+        <p>Decenni nel settore: comprendiamo le esigenze di ogni operatore.</p>
+      </div>
+      <div class="perche-card fade-in" style="--card-bg: #4a3520;">
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        </div>
+        <h3>Prezzi Competitivi</h3>
+        <p>Condizioni vantaggiose grazie al posizionamento diretto nei mercati.</p>
+      </div>
+      <div class="perche-card fade-in" style="--card-bg: #2a3d1e;">
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Supporto Dedicato</h3>
+        <p>Un referente per cliente, risposte rapide e soluzioni personalizzate.</p>
+      </div>
+      <div class="perche-card fade-in" style="--card-bg: #4a3520;">
+        <div class="canale-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Rete Internazionale</h3>
+        <p>Approvvigionamento diretto: USA, Iran, Spagna, Turchia e altri.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PRODOTTI -->
+  <section id="prodotti" class="prodotti">
+    <div class="container">
+	<!-- CATALOGO TEASER -->
+	
+<section class="catalogo-teaser">
+  <div class="container catalogo-teaser-grid">
+    <div class="catalogo-teaser-image fade-in">
+      <img src="espositore.png" alt="ZyZFruit - Espositore frutta secca"/>
+    </div>
+    <div class="catalogo-teaser-content fade-in">
+      <span class="leaf-icon">
+        <img src="logo.png" alt="logo"/>
+      </span>
+      <h2>Scopri la Nostra Selezione</h2>
+      <p>Una curata selezione di frutta secca pregiata, direttamente dal cuore della Sicilia. Ogni prodotto è scelto con cura per garantire qualità, freschezza e autenticità.</p>
+    </div>
+  </div>
+</section>
+
+      <h2 class="section-title fade-in">I nostri prodotti</h2>
+      <div class="prodotti-grid">
+        <div class="product-card fade-in">
+          <div class="product-img">
+            <img src="foto\pinoli.jpg" alt="Crema spalmabile al pistacchio" loading="lazy"/>
+          </div>
+        </div>
+        <div class="product-card fade-in">
+          <div class="product-img">
+            <img src="foto\pistacchio.jpg" alt="Pistacchi sgusciati" loading="lazy"/>
+          </div>
+        </div>
+        <div class="product-card fade-in">
+          <div class="product-img">
+            <img src="foto\mandorla_tostata.jpg" alt="Grani di pistacchio selezionati" loading="lazy"/>
+          </div>
+        </div>
+        <div class="product-card fade-in">
+          <div class="product-img">
+            <img src="foto\nocciole_tostate.jpg" alt="Biscotti al pistacchio artigianali" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+      <div class="prodotti-cta fade-in">
+        <a href="catalogo.html" class="btn btn-dark">Vedi tutto il catalogo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti" class="contatti">
+    <div class="contatti-overlay"></div>
+    <div class="container contatti-grid">
+      <div class="contatti-info fade-in">
+        <h2>Contattaci</h2>
+        <p class="contatti-sub">Hai domande o vuoi ricevere maggiori informazioni? Siamo qui per te!</p>
+        <div class="info-box">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <span>Via Adolfo Holm, 24 — 90146 Palermo (PA) - Sicilia</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <span>+39 320 951 0221</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✉️</span>
+            <span>zyzfruitsrls@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="contatti-form fade-in">
+        <div class="whatsapp-box">
+          <div class="whatsapp-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </div>
+          <h3>Scrivici su WhatsApp</h3>
+          <p>Siamo disponibili per rispondere a tutte le tue domande. Clicca il bottone qui sotto per avviare una conversazione diretta con noi.</p>
+          <a href="https://wa.me/3209510221" target="_blank" class="btn btn-whatsapp">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Apri chat WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#" class="logo logo-white">
+          <img src="logo.png" class="logo-icon" alt="ZyZFruit logo"/>
+          <div class="logo-text">
+            <span class="logo-main">ZyZFruit</span>
+            <span class="logo-sub">FRUTTA SECCA DI QUALITÀ</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Qualità, passione e tradizione per portare la vera frutta secca sulla tua tavola.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Link rapidi</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#storia">Storia</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#prodotti">Catalogo</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </div>
+	  <div class="footer-col">
+        <h4>Contatti</h4>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Via Adolfo, 24<br/>90146 Palermo (PA) - Sicilia</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span>+39 320 951 0221</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <span>zyzfruitsrls@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Seguici</h4>
+        <div class="social-icons">
+          <!-- <a href="https://www.facebook.com/tuapagina" target="_blank" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a> -->
+          <a href="https://www.instagram.com/zyz_fruit" target="_blank" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/3209510221" target="_blank" class="social-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+	  <p class="footer-legal">
+			<a href="#" onclick="document.getElementById('cookieBanner').style.display='flex'; return false;">Cookie Policy</a>
+				&nbsp;|&nbsp;
+			<a href="privacy.html">Privacy Policy</a>
+	  </p>
+      <p>© 2026 ZyZFruit – Tutti i diritti riservati | P.IVA 07177460826</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

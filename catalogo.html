@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catalogo – ZyZFruit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="catalogo.css"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+</head>
+<body>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>Questo sito utilizza solo cookie tecnici necessari al funzionamento. Non raccogliamo né vendiamo dati personali. I font Google e le immagini esterne potrebbero impostare cookie di terze parti fuori dal nostro controllo.</p>
+  <button class="btn-cookie-accept" onclick="acceptCookie()">Ho capito</button>
+</div>
+
+  <!-- ===== NAVBAR (identica all'index) ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" class="logo-icon" alt="ZyZFruit logo"/>
+        <div class="logo-text">
+          <span class="logo-main">ZyZFruit</span>
+          <span class="logo-sub">FRUTTA SECCA DI QUALITÀ</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#storia">Storia</a>
+        <a href="index.html#servizi">Servizi</a>
+        <a href="catalogo.html" class="nav-active">Catalogo</a>
+        <a href="index.html#contatti">Contatti</a>
+      </nav>
+
+      <a href="catalogo.html" class="btn btn-primary nav-cta">Scopri il catalogo</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="page-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <h1>I nostri prodotti</h1>
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Catalogo</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ===== CATALOG BODY ===== -->
+  <main class="catalog-main">
+    <div class="container catalog-layout">
+
+      <!-- SIDEBAR -->
+      <aside class="catalog-sidebar">
+        <h3 class="sidebar-title">Categorie</h3>
+        <ul class="category-list">
+          <li>
+            <button class="cat-btn active" data-filter="all">
+              <svg class="cat-icon" viewBox="0 0 20 20" fill="none"><path d="M10 2C10 2 4 5 4 11C4 14.314 6.686 17 10 17C13.314 17 16 14.314 16 11C16 5 10 2 10 2Z" fill="#6b8f3a"/><path d="M10 2C10 2 10 8 8 12" stroke="#3a5c2c" stroke-width="1" stroke-linecap="round"/></svg>
+              Tutti i prodotti
+            </button>
+          </li>
+          <li>
+            <button class="cat-btn" data-filter="mandorle">
+              <svg class="cat-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="12" r="6" stroke="#6b8f3a" stroke-width="1.5" fill="none"/><path d="M7 9C7 9 8 6 10 6C12 6 13 9 13 9" stroke="#6b8f3a" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M9 6V4" stroke="#6b8f3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Mandorle
+            </button>
+          </li>
+          <li>
+            <button class="cat-btn" data-filter="pistacchi">
+              <svg class="cat-icon" viewBox="0 0 20 20" fill="none"><ellipse cx="10" cy="12" rx="5" ry="4" stroke="#6b8f3a" stroke-width="1.5" fill="none"/><path d="M10 8C10 8 8 6 10 4C12 6 10 8 10 8Z" fill="#6b8f3a"/><path d="M7 12C7 12 10 10 13 12" stroke="#6b8f3a" stroke-width="1" stroke-linecap="round"/></svg>
+              Pistacchi
+            </button>
+          </li>
+          <li>
+            <button class="cat-btn" data-filter="nocciole">
+              <svg class="cat-icon" viewBox="0 0 20 20" fill="none"><circle cx="7" cy="11" r="3" stroke="#6b8f3a" stroke-width="1.5" fill="none"/><circle cx="13" cy="11" r="3" stroke="#6b8f3a" stroke-width="1.5" fill="none"/><circle cx="10" cy="8" r="2.5" stroke="#6b8f3a" stroke-width="1.5" fill="none"/></svg>
+              Nocciole
+            </button>
+          </li>
+          <li>
+            <button class="cat-btn" data-filter="spezie">
+              <svg class="cat-icon" viewBox="0 0 20 20" fill="none"><rect x="3" y="9" width="14" height="8" rx="2" stroke="#6b8f3a" stroke-width="1.5" fill="none"/><path d="M6 9V7C6 5.343 7.343 4 9 4H11C12.657 4 14 5.343 14 7V9" stroke="#6b8f3a" stroke-width="1.5" fill="none"/><path d="M8 13H12" stroke="#6b8f3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Spezie E Aromi
+            </button>
+          </li>
+          <li>
+            <button class="cat-btn" data-filter="altro">
+              <svg class="cat-icon" viewBox="0 0 20 20" fill="none"><rect x="4" y="6" width="12" height="10" rx="2" stroke="#6b8f3a" stroke-width="1.5" fill="none"/><path d="M4 10H16" stroke="#6b8f3a" stroke-width="1.5"/><path d="M8 6V4" stroke="#6b8f3a" stroke-width="1.5" stroke-linecap="round"/><path d="M12 6V4" stroke="#6b8f3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Altro
+            </button>
+          </li>
+        </ul>
+
+        <!-- Decorative leaf watermark -->
+        <div class="sidebar-watermark" aria-hidden="true">
+          <svg viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 10C60 10 20 30 20 75C20 105 37 130 60 145C83 130 100 105 100 75C100 30 60 10 60 10Z" stroke="#3a5c2c" stroke-width="1.5" fill="none" opacity="0.18"/>
+            <path d="M60 10C60 10 60 60 45 95" stroke="#3a5c2c" stroke-width="1.5" stroke-linecap="round" opacity="0.18"/>
+            <path d="M60 10C60 10 60 65 75 100" stroke="#3a5c2c" stroke-width="1.5" stroke-linecap="round" opacity="0.18"/>
+            <path d="M35 50C50 42 70 42 85 50" stroke="#3a5c2c" stroke-width="1" stroke-linecap="round" opacity="0.12"/>
+            <path d="M28 68C45 58 75 58 92 68" stroke="#3a5c2c" stroke-width="1" stroke-linecap="round" opacity="0.12"/>
+            <path d="M25 86C44 74 76 74 95 86" stroke="#3a5c2c" stroke-width="1" stroke-linecap="round" opacity="0.10"/>
+          </svg>
+        </div>
+      </aside>
+
+      <!-- PRODUCTS AREA -->
+      <div class="catalog-content">
+
+        <!-- Toolbar: search -->
+		<div class="catalog-toolbar">
+		  <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cerca un prodotto..." aria-label="Cerca prodotto"/>
+            <button class="search-btn" aria-label="Cerca">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="catalog-grid" id="catalogGrid">
+		
+		  <article class="cat-product-card fade-in" data-category="mandorle">
+            <div class="cat-product-img">
+              <img src="foto\farina_di_mandorla.jpg" alt="Farina Di Mandorle" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Farina Di Mandorle</p>
+            </div>
+          </article>
+
+          <article class="cat-product-card fade-in" data-category="mandorle">
+            <div class="cat-product-img">
+              <img src="foto\bastoncini_di_mandorla.jpg" alt="Bastoncini Di Mandorle" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Bastoncini Di Mandorle</p>
+            </div>
+          </article>
+
+          <article class="cat-product-card fade-in" data-category="mandorle">
+            <div class="cat-product-img">
+              <img src="foto\mandorla_a_fette.jpg" alt="Mandorla A Fette" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Mandorla A Fette</p>
+            </div>
+          </article>
+
+          <article class="cat-product-card fade-in" data-category="mandorle">
+            <div class="cat-product-img">
+              <img src="foto\granella_di_mandorla.jpg" alt="Granella Di Mandorle" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Granella Di Mandorle</p>
+            </div>
+          </article>
+
+          <article class="cat-product-card fade-in" data-category="mandorle">
+            <div class="cat-product-img">
+              <img src="foto\mandorla_pelata.jpg" alt="Mandorla Pelata" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Mandorla Pelata</p>
+            </div>
+          </article>
+
+          <article class="cat-product-card fade-in" data-category="mandorle">
+            <div class="cat-product-img">
+              <img src="foto\mandorla_sgusciata.jpg" alt="Mandorla Sgusciata" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Mandorla Sgusciata</p>
+            </div>
+          </article>
+
+          <article class="cat-product-card fade-in" data-category="mandorle">
+            <div class="cat-product-img">
+              <img src="foto\mandorla_tostata.jpg" alt="Mandorla Tostata" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Mandorla Tostata</p>
+            </div>
+          </article>
+
+          <article class="cat-product-card fade-in" data-category="pistacchi">
+            <div class="cat-product-img">
+              <img src="foto\farina_di_pistacchio.jpg" alt="Farina Di Pistacchio" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Farina Di Pistacchio</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="pistacchi">
+            <div class="cat-product-img">
+              <img src="foto\pistacchio_con_il_guscio.jpg" alt="Pistacchio Con Il Guscio" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Pistacchio Con Il Guscio</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="pistacchi">
+            <div class="cat-product-img">
+              <img src="foto\granella_di_pistacchio.jpg" alt="Granella Di Pistacchio" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Granella Di Pistacchio</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="pistacchi">
+            <div class="cat-product-img">
+              <img src="foto\pistacchio.jpg" alt="Pistacchio" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Pistacchio</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="nocciole">
+            <div class="cat-product-img">
+              <img src="foto\granella_di_nocciola.jpg" alt="Nocciole Tostate" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Granella Di Nocciola</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="nocciole">
+            <div class="cat-product-img">
+              <img src="foto\nocciole_tostate.jpg" alt="Nocciole Tostate" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Nocciole Tostate</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\aromi_per_arrosto.jpg" alt="Aromi Per Arrosto" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Aromi Per Arrosto</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\cumino.jpg" alt="Cumino" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Cumino</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\curcuma.jpg" alt="Curcuma" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Curcuma</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\curry.jpg" alt="Curry" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Curry</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\noce_moscata.jpg" alt="Noce Moscata" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Noce Moscata</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\origano.jpg" alt="Origano" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Origano</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\paprica piccante.jpg" alt="Paprica Piccante" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Paprica Piccante</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\pepe_nero_macinato.jpg" alt="Pepe Nero Macinato" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Pepe Nero Macinato</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\peperoncino.jpg" alt="Peperoncino" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Peperoncino</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\zenzero.jpg" alt="Zenzero" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Zenzero</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="spezie">
+            <div class="cat-product-img">
+              <img src="foto\peperoncino_frantumato.jpg" alt="Peperoncino Frantumato" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Peperoncino Frantumato</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\aglio_a_fette.jpg" alt="Aglio A Fette" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Aglio A Fette</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\anacardi.jpg" alt="Anacardi" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Anacardi</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\arachidi_platinati.jpg" alt="Arachidi Platinati" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Arachidi Platinati</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\castagne_morbide.jpg" alt="Castagne Morbide" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Castagne Morbide</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\chiodi_di_garofano.jpg" alt="Chiodi Di Garofano" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Chiodi Di Garofano</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\noci.jpg" alt="Noci" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Noci</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\passolina.jpg" alt="Passolina" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Passolina</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\passolina_e_pinoli.jpg" alt="Passolina E Pinoli" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Passolina E Pinoli</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\pinoli.jpg" alt="Pinoli" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Pinoli</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\sesamo.jpg" alt="Sesamo" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Sesamo</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\spaghettata_siciliana.jpg" alt="Spaghettata Siciliana" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Spaghettata Siciliana</p>
+            </div>
+          </article>
+		  
+		  <article class="cat-product-card fade-in" data-category="altro">
+            <div class="cat-product-img">
+              <img src="foto\timo.jpg" alt="Timo" loading="lazy"/>
+            </div>
+            <div class="cat-product-body">
+              <p>Timo</p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty state -->
+        <div class="no-results" id="noResults" style="display:none;">
+          <p>Nessun prodotto trovato.</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (identico all'index) ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo logo-white">
+          <img src="logo.png" class="logo-icon" alt="ZyZFruit logo"/>
+          <div class="logo-text">
+            <span class="logo-main">ZyZFruit</span>
+            <span class="logo-sub">FRUTTA SECCA DI QUALITÀ</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Qualità, passione e tradizione per portare la vera frutta secca sulla tua tavola.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Link rapidi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#storia">Storia</a></li>
+          <li><a href="index.html#servizi">Servizi</a></li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="index.html#contatti">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Via Adolfo holm, 24<br/>90146 Palermo (PA) - Sicilia</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span>+39 320 951 0221</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <span>zyzfruitsrls@gmail.com</span>
+          </div>
+        </div>
+      </div>
+	  <div class="footer-col">
+        <h4>Seguici</h4>
+        <div class="social-icons">
+          <!-- <a href="https://www.facebook.com/tuapagina" target="_blank" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a> -->
+          <a href="https://www.instagram.com/zyz_fruit" target="_blank" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/3209510221" target="_blank" class="social-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative leaf watermark in footer -->
+    <div class="footer-leaf-deco" aria-hidden="true">
+      <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 20C100 20 30 55 30 130C30 175 62 210 100 230C138 210 170 175 170 130C170 55 100 20 100 20Z" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/>
+        <path d="M100 20C100 20 100 110 72 165" stroke="rgba(255,255,255,0.08)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M100 20C100 20 100 115 128 170" stroke="rgba(255,255,255,0.08)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M55 80C75 68 125 68 145 80" stroke="rgba(255,255,255,0.05)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M44 110C68 95 132 95 156 110" stroke="rgba(255,255,255,0.05)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M38 140C65 123 135 123 162 140" stroke="rgba(255,255,255,0.04)" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="footer-bottom">
+	  <p class="footer-legal">
+			<a href="#" onclick="document.getElementById('cookieBanner').style.display='flex'; return false;">Cookie Policy</a>
+				&nbsp;|&nbsp;
+			<a href="privacy.html">Privacy Policy</a>
+	  </p>
+      <p>© 2026 ZyZFruit – Tutti i diritti riservati | P.IVA 07177460826</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="catalogo.js"></script>
+</body>
+</html>
